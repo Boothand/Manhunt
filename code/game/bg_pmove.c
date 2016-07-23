@@ -1825,7 +1825,7 @@ static int PM_TryRoll( void )
 
 	if ( BG_SaberInAttack( pm->ps->saberMove ) || BG_SaberInSpecialAttack( pm->ps->torsoAnim ) 
 		|| BG_SpinningSaberAnim( pm->ps->legsAnim ) 
-		|| (!pm->ps->clientNum&&PM_SaberInStart( pm->ps->saberMove )) )
+		/*|| (!pm->ps->clientNum&&PM_SaberInStart( pm->ps->saberMove ))*/ )	//Boot: Client 0 roll bug fix
 	{//attacking or spinning (or, if player, starting an attack)
 		return 0;
 	}
